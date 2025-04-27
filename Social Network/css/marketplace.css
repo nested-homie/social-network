@@ -1,0 +1,134 @@
+@import url('common.css');
+
+.marketplace-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.marketplace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.marketplace-header h1 {
+    font-size: 28px;
+    color: #050505;
+}
+
+.marketplace-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.create-listing-btn {
+    composes: btn btn-primary;
+}
+
+.filter-btn {
+    composes: btn btn-secondary;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e4e6eb;
+    color: #050505;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.category-btn.active {
+    background-color: #1877f2;
+    color: white;
+}
+
+.category-btn:hover {
+    background-color: #d8dadf;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    composes: card;
+    transition: transform 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #050505;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1877f2;
+    margin: 0 0 5px 0;
+}
+
+.location {
+    font-size: 14px;
+    color: #65676b;
+    margin: 0 0 10px 0;
+}
+
+.item-meta {
+    display: flex;
+    gap: 15px;
+    color: #65676b;
+    font-size: 14px;
+}
+
+.item-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .marketplace-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .marketplace-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+} 

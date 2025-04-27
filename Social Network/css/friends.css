@@ -1,0 +1,157 @@
+@import url('common.css');
+
+.friends-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.friends-header {
+    margin-bottom: 30px;
+}
+
+.friends-header h1 {
+    font-size: 28px;
+    color: #050505;
+    margin-bottom: 20px;
+}
+
+.friends-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #e4e6eb;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    color: #65676b;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: #1877f2;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1877f2;
+}
+
+.friends-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.friend-card {
+    composes: card;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.friend-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.friend-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #050505;
+}
+
+.friend-info p {
+    margin: 0 0 10px 0;
+    color: #65676b;
+    font-size: 14px;
+}
+
+.message-btn {
+    composes: btn btn-secondary;
+}
+
+.suggestions-section h2 {
+    font-size: 20px;
+    color: #050505;
+    margin-bottom: 20px;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.suggestion-card {
+    composes: card;
+}
+
+.suggestion-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.suggestion-info {
+    padding: 15px;
+}
+
+.suggestion-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #050505;
+}
+
+.suggestion-info p {
+    margin: 0 0 10px 0;
+    color: #65676b;
+    font-size: 14px;
+}
+
+.add-friend-btn {
+    composes: btn btn-primary;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .friends-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .friend-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .friend-card img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .message-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 

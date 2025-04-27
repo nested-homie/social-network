@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Social Network</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <i class="fas fa-users"></i>
+                Social Network
+            </a>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search marketplace...">
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="friends.html" class="nav-link">
+                <i class="fas fa-user-friends"></i>
+                <span>Friends</span>
+            </a>
+            <a href="marketplace.html" class="nav-link active">
+                <i class="fas fa-store"></i>
+                <span>Marketplace</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-comment"></i>
+                <span class="notification-badge">5</span>
+            </a>
+            <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="profile-img">
+                <div class="profile-dropdown">
+                    <a href="#"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="shortcut-links">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="friends.html">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Friends</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Groups</span>
+                </a>
+                <a href="marketplace.html" class="active">
+                    <i class="fas fa-store"></i>
+                    <span>Marketplace</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-tv"></i>
+                    <span>Watch</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-history"></i>
+                    <span>Memories</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="marketplace-header">
+                <h1>Marketplace</h1>
+                <div class="marketplace-actions">
+                    <button class="action-btn primary">
+                        <i class="fas fa-plus"></i>
+                        <span>Create New Listing</span>
+                    </button>
+                    <button class="action-btn secondary">
+                        <i class="fas fa-filter"></i>
+                        <span>Filters</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="marketplace-categories">
+                <button class="category-btn active">All Items</button>
+                <button class="category-btn">Vehicles</button>
+                <button class="category-btn">Property</button>
+                <button class="category-btn">Electronics</button>
+                <button class="category-btn">Furniture</button>
+                <button class="category-btn">Clothing</button>
+            </div>
+
+            <div class="marketplace-grid">
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://source.unsplash.com/random/400x300/?car" alt="Listing">
+                        <span class="price">$15,000</span>
+                    </div>
+                    <div class="listing-info">
+                        <h3>2019 Toyota Camry</h3>
+                        <p>Excellent condition, low mileage</p>
+                        <div class="listing-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> New York</span>
+                            <span><i class="fas fa-clock"></i> 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://source.unsplash.com/random/400x300/?apartment" alt="Listing">
+                        <span class="price">$2,500/mo</span>
+                    </div>
+                    <div class="listing-info">
+                        <h3>2 Bedroom Apartment</h3>
+                        <p>Modern apartment in downtown</p>
+                        <div class="listing-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Los Angeles</span>
+                            <span><i class="fas fa-clock"></i> 1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="https://source.unsplash.com/random/400x300/?laptop" alt="Listing">
+                        <span class="price">$1,200</span>
+                    </div>
+                    <div class="listing-info">
+                        <h3>MacBook Pro 2021</h3>
+                        <p>M1 Chip, 16GB RAM, 512GB SSD</p>
+                        <div class="listing-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> San Francisco</span>
+                            <span><i class="fas fa-clock"></i> 3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="marketplace-filters">
+                <h4>Filters</h4>
+                <div class="filter-section">
+                    <h5>Price Range</h5>
+                    <div class="price-range">
+                        <input type="range" min="0" max="100000" value="50000">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <input type="number" placeholder="Max" value="100000">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h5>Location</h5>
+                    <input type="text" placeholder="Enter location">
+                </div>
+                <div class="filter-section">
+                    <h5>Category</h5>
+                    <div class="category-checkboxes">
+                        <label>
+                            <input type="checkbox"> Vehicles
+                        </label>
+                        <label>
+                            <input type="checkbox"> Property
+                        </label>
+                        <label>
+                            <input type="checkbox"> Electronics
+                        </label>
+                        <label>
+                            <input type="checkbox"> Furniture
+                        </label>
+                        <label>
+                            <input type="checkbox"> Clothing
+                        </label>
+                    </div>
+                </div>
+                <button class="apply-filters">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

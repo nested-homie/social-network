@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Check if user is logged in
+        window.onload = function() {
+            const userData = localStorage.getItem('userData');
+            if (!userData) {
+                window.location.href = 'signup.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <i class="fas fa-users"></i>
+                Social Network
+            </a>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="friends.html" class="nav-link">
+                <i class="fas fa-user-friends"></i>
+                <span>Friends</span>
+            </a>
+            <a href="marketplace.html" class="nav-link">
+                <i class="fas fa-store"></i>
+                <span>Marketplace</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-comment"></i>
+                <span class="notification-badge">5</span>
+            </a>
+            <div class="profile">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="profile-img">
+                <div class="profile-dropdown">
+                    <a href="#"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="shortcut-links">
+                <a href="index.html" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="friends.html">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Friends</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Groups</span>
+                </a>
+                <a href="marketplace.html">
+                    <i class="fas fa-store"></i>
+                    <span>Marketplace</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-tv"></i>
+                    <span>Watch</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-history"></i>
+                    <span>Memories</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="story-section">
+                <div class="story">
+                    <img src="https://picsum.photos/id/1015/300/200" alt="Story">
+                    <div class="story-text">
+                        <i class="fas fa-plus-circle"></i>
+                        <h4>Create Story</h4>
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/id/1016/300/200" alt="Story">
+                    <div class="story-text">
+                        <h4>John's Story</h4>
+                        <p>2 hours ago</p>
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/id/1018/300/200" alt="Story">
+                    <div class="story-text">
+                        <h4>Sarah's Story</h4>
+                        <p>4 hours ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                    <input type="text" placeholder="What's on your mind?">
+                </div>
+                <div class="create-post-links">
+                    <a href="#" class="post-link">
+                        <i class="fas fa-video"></i>
+                        <span>Live Video</span>
+                    </a>
+                    <a href="#" class="post-link">
+                        <i class="fas fa-images"></i>
+                        <span>Photo/Video</span>
+                    </a>
+                    <a href="#" class="post-link">
+                        <i class="fas fa-smile"></i>
+                        <span>Feeling/Activity</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Profile">
+                    <div class="post-info">
+                        <h3>John Doe</h3>
+                        <p>2 hours ago</p>
+                    </div>
+                    <div class="post-options">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Just had an amazing day at the beach! 🌊</p>
+                    <img src="https://source.unsplash.com/random/600x400/?beach" alt="Post Image">
+                </div>
+                <div class="post-stats">
+                    <div class="stat">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>1.2K</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-comment"></i>
+                        <span>245</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-share"></i>
+                        <span>56</span>
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>Comment</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="sponsored">
+                <h4>Sponsored</h4>
+                <div class="sponsored-content">
+                    <img src="https://picsum.photos/id/1025/100/100" alt="Sponsored">
+                    <div>
+                        <h4>Sponsored Ad</h4>
+                        <p>Check out our new products!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <h4>Contacts</h4>
+                <div class="contact-list">
+                    <div class="contact">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Contact">
+                        <div class="contact-info">
+                            <h4>Jane Smith</h4>
+                            <p>Online</p>
+                        </div>
+                        <div class="contact-actions">
+                            <button><i class="fas fa-video"></i></button>
+                            <button><i class="fas fa-comment"></i></button>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Contact">
+                        <div class="contact-info">
+                            <h4>Mike Johnson</h4>
+                            <p>Online</p>
+                        </div>
+                        <div class="contact-actions">
+                            <button><i class="fas fa-video"></i></button>
+                            <button><i class="fas fa-comment"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
